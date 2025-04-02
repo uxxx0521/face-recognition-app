@@ -52,3 +52,36 @@ export default tseslint.config({
   },
 })
 ```
+# 🧠 Face Recognition App
+
+A real-time face recognition web app built with **React**, **TypeScript**, and **face-api.js**. The app uses your webcam to detect and recognize faces directly in the browser — no backend required. Fast, efficient, and privacy-friendly.
+
+---
+
+## 🚀 Features
+
+- 📷 **Live webcam facial detection**
+- 🧠 Uses `face-api.js` with pre-trained deep learning models
+- ⚡ Built with **Vite** for ultra-fast dev experience
+- 💻 Written in **TypeScript** with strong type safety
+- 🔍 Real-time face bounding boxes
+- 🎨 Clean and responsive UI
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React + TypeScript
+- **Build Tool:** Vite
+- **AI Models:** [face-api.js](https://github.com/justadudewhohacks/face-api.js-models)
+- **Linting:** ESLint with type-aware rules
+- **ToolKit:** Redux Toolkit for state management
+
+---
+
+## 📦 Setup Instructions
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/uxxx0521/face-recognition-app.git
+cd face-recognition-app
