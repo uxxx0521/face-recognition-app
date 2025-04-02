@@ -1,0 +1,23 @@
+.instructions {
+    max-width: 700px;
+    margin: 24px auto;
+    padding: 16px 24px;
+    background-color: #f9f9ff;
+    border-left: 4px solid #3F2A89;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .instructions h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #3F2A89;
+  }
+  
+  .instructions p {
+    line-height: 1.6;
+    margin: 8px 0;
+  }
+  

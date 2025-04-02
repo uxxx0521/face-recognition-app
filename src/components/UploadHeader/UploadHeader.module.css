@@ -1,0 +1,25 @@
+.header {
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 100% vw;
+  }
+  
+  
+  .header h2 {
+    color: #1b2b7d;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 16px;
+    color: #444;
+  }
+  .divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
