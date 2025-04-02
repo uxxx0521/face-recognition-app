@@ -84,4 +84,37 @@ A real-time face recognition web app built with **React**, **TypeScript**, and *
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/uxxx0521/face-recognition-app.git
-cd face-recognition-app
+cd face-detection-ai
+```
+### 2. Install dependencies
+```bash
+npm install
+```
+### 4. Run the app
+```bash
+num run dev
+```
+App will be available at http://localhost:5173/ (or similar, depending on your Vite config).
+
+## 📂 Project Structure
+```text
+face-recognition-app/
+├── public/
+│   └── models/            # face-api.js model files
+├── src/
+│   ├── components/        # React components
+│   ├── state/             # Redux Toolkit slices (if used)
+│   ├── App.tsx
+│   └── main.tsx
+├── eslint.config.js
+├── index.html
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+## 📄 License
+MIT License
+
+## 🙋‍♂️ Author
+Built by @uxxx0521 — feel free to reach out!
