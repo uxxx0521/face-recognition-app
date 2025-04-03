@@ -6,7 +6,7 @@ const Header: React.FC = () => {
         <header className={styles.header}>
             <div className={styles.logoContainer}>
                 <img
-                    src="/logo.png"
+                    src={`${import.meta.env.BASE_URL}logo.png`}
                     alt="Voicera Logo"
                     className={styles.logo}
                 />

@@ -21,7 +21,8 @@ const WebcamWithDetection: React.FC = () => {
   // Load models once
   useEffect(() => {
     const loadModels = async () => {
-      const MODEL_URL = "/models";
+      const MODEL_URL = `${import.meta.env.BASE_URL}models`;
+
       try {
         await Promise.all([
           faceapi.nets.tinyFaceDetector.loadFromUri(`${MODEL_URL}/tiny_face_detector`),

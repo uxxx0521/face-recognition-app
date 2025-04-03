@@ -40,7 +40,7 @@ npm install
 ```bash
 num run dev
 ```
-App will be available at http://localhost:5173/ (or similar, depending on your Vite config).
+App will be available at http://localhost:5173/face_detection/ (or similar, depending on your Vite config).
 
 ## 📂 Project Structure
 ```text

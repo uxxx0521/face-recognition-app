@@ -10,12 +10,14 @@ interface DetectionState {
   isRunning: boolean;
   results: DetectionResult[];
   noFaceDetected: boolean;
+  imageSrc: string | null;
 }
 
 const initialState: DetectionState = {
   isRunning: false,
   results: [],
   noFaceDetected: false,
+  imageSrc: null,
 };
 
 const detectionSlice = createSlice({
@@ -37,6 +39,9 @@ const detectionSlice = createSlice({
     setNoFaceDetected(state, action: PayloadAction<boolean>) {
       state.noFaceDetected = action.payload;
     },
+    setImageSrc(state, action: PayloadAction<string | null>) {
+      state.imageSrc = action.payload;
+    },
   },
 });
 
@@ -45,6 +50,8 @@ export const {
   stopDetection,
   updateResults,
   setNoFaceDetected,
+  setImageSrc,
 } = detectionSlice.actions;
 
 export default detectionSlice.reducer;
+

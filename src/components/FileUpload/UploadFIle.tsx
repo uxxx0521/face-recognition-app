@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import * as faceapi from "face-api.js";
 import styles from "./UploadFile.module.css";
 import heic2any from "heic2any";
@@ -6,20 +6,21 @@ import { useAppDispatch, useAppSelector } from "../../state/hooks";
 import {
     updateResults,
     setNoFaceDetected,
+    setImageSrc,
 } from "../../state/detection/detectionSlice";
 
 const UploadFile: React.FC = () => {
-    const [imageSrc, setImageSrc] = useState<string | null>(null);
     const imageRef = useRef<HTMLImageElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const dispatch = useAppDispatch();
     const noFaceDetected = useAppSelector((state) => state.detection.noFaceDetected);
+    const imageSrc = useAppSelector((state) => state.detection.imageSrc);
 
     const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
         if (!file) return;
 
-        dispatch(setNoFaceDetected(false)); // Reset message
+        dispatch(setNoFaceDetected(false));
 
         let finalFile: File = file;
 
@@ -37,16 +38,18 @@ const UploadFile: React.FC = () => {
         }
 
         const reader = new FileReader();
-        reader.onload = () => setImageSrc(reader.result as string);
+        reader.onload = () => dispatch(setImageSrc(reader.result as string));
         reader.readAsDataURL(finalFile);
     };
 
     const handleDetect = async () => {
         if (!imageRef.current || !canvasRef.current) return;
 
-        await faceapi.nets.tinyFaceDetector.loadFromUri("/models/tiny_face_detector");
-        await faceapi.nets.ageGenderNet.loadFromUri("/models/age_gender_model");
-        await faceapi.nets.faceExpressionNet.loadFromUri("/models/face_expression");
+        const MODEL_URL = `${import.meta.env.BASE_URL}models`;
+
+        await faceapi.nets.tinyFaceDetector.loadFromUri(`${MODEL_URL}/tiny_face_detector`);
+        await faceapi.nets.ageGenderNet.loadFromUri(`${MODEL_URL}/age_gender_model`);
+        await faceapi.nets.faceExpressionNet.loadFromUri(`${MODEL_URL}/face_expression`);
 
         const detections = await faceapi
             .detectAllFaces(imageRef.current, new faceapi.TinyFaceDetectorOptions())
