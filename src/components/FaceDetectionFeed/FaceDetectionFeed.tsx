@@ -158,8 +158,6 @@ const WebcamWithDetection: React.FC = () => {
               ref={webcamRef}
               audio={false}
               screenshotFormat="image/jpeg"
-              width={640}
-              height={480}
               className={styles.webcam}
               videoConstraints={{ facingMode: "user" }}
             />

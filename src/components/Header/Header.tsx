@@ -14,7 +14,7 @@ const Header: React.FC = () => {
             </div>
 
             <div>
-                <span className={styles.badge}>Live Demo</span>
+                <button className={styles.badgeButton}>Demo</button>
             </div>
         </header>
     );

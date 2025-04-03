@@ -10,13 +10,14 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="heroBackground">
         <Header />
         <Instructions />
         <FaceDetectionFeed />
-        <UploadHeader />
-        <UploadFile />
       </div>
+      <UploadHeader />
+      <UploadFile />
+
     </>
   )
 }

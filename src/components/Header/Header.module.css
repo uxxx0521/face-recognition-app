@@ -4,8 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 24px;
+    padding: 20px 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
   }
   
   .logoContainer {
@@ -21,17 +22,35 @@
   
   .title {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     margin: 0;
   }
   
-  .badge {
+  .badgeButton {
     background-color: #EF2A82;
     color: white;
-    padding: 6px 12px;
+    padding: 12px 12px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
   }
   
+  .badgeButton:hover {
+    background-color: #c61d69; /* Optional hover effect */
+  }
+  
+  @media(max-width:768px){
+    .badge{
+      margin-left:5px;
+    }
+    .header {
+      padding: 12px 12px;
+    }
+    .title {
+      font-size: 20px;
+    }
+  }

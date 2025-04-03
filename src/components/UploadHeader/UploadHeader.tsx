@@ -6,7 +6,7 @@ const UploadHeader: React.FC = () => {
         <div className={styles.header}>
             <hr className={styles.divider} />
             <h2>Upload a photo here!</h2>
-            <p>
+            <p className={styles.instruction}>
                 Select an image and click <strong>Detect Faces</strong> to see age, gender, and emotion
                 analysis. HEIC (iPhone) files are supported!
             </p>

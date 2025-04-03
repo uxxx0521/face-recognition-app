@@ -1,72 +1,91 @@
 .wrapper {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .videoContainer {
-    position: relative;
-    width: 640px;
-    height: 480px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 4 / 3; /* Maintain 640x480 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.videoContainerInactive {
+  composes: videoContainer;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
+}
+
+.webcam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;         /* Responsive width */
+  height: 100%;        /* Maintain full container height */
+  object-fit: cover;   /* Keeps aspect ratio */
+  border-radius: 8px;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;         /* Match webcam sizing */
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.placeholder {
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 4 / 3;
+  background-color: #eee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
+}
+
+.controlButton {
+  margin-top: 24px;
+  padding: 10px 24px;
+  background: #EF2A82;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;            
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.controlButton:hover {
+  background: #3F2A89;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 42, 130, 0.3);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 24px;
   }
 
-  .videoContainerInactive {
-    composes: videoContainer; /* reuse styles from .videoContainer */
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-style: italic;
-  }
-  
-  .webcam {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 8px;
-  }
-  
-  .canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: none;
-  }
-  
-  .placeholder {
-    width: 640px;
-    height: 480px;
-    background-color: #eee;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-style: italic;
-  }
-  
   .controlButton {
-    margin-top: 24px;
-    padding: 10px 24px;
-    background: #3F2A89;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 320px;
   }
-  
-  .controlButton:hover {
-    background: #EF2A82;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(239, 42, 130, 0.3);
-  }
-  
+}
