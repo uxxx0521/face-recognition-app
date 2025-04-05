@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface DetectionResult {
+  name: string;
   age: number;
   gender: string;
   emotion: string;

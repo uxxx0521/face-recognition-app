@@ -16,7 +16,7 @@
   }
   
   .header p {
-    font-size: 16px;
+    font-size: 19px;
     color: #444;
   }
   .divider {
@@ -33,5 +33,9 @@
   @media(max-width: 768px){
     .header {
       margin-bottom: 0px;
+    }
+    .header p {
+      font-size: 17px;
+      color: #444;
     }
   }

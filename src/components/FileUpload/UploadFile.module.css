@@ -15,9 +15,10 @@
   .imageContainer {
     position: relative;
     width: 100%;
-    max-width: 400px;  /* Limit size on desktop */
-    margin: 0 auto;    /* Center horizontally */
-    aspect-ratio: auto; /* optional: remove or tweak if needed */
+    max-width: 400px;  
+    margin: 0 auto;    
+    aspect-ratio: auto;
+    
   }
   
   .image {
@@ -25,6 +26,7 @@
     width: 100%; 
     height: auto;
     border-radius: 8px;
+
   }
   
   .canvas {
@@ -47,12 +49,23 @@
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 50px;
   }
   
   .detectButton:hover {
     background: #EF2A82;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(239, 42, 130, 0.3);
+  }
+
+  .noFaceMessage{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 19px;
+    color: #444;
+    margin-top: 0px;
+    margin-bottom:70px;
+    padding-left:20px;
+    padding-right: 20px;
   }
   
   @media(max-width: 768px){

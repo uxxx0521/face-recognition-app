@@ -10,7 +10,7 @@ const Header: React.FC = () => {
                     alt="Voicera Logo"
                     className={styles.logo}
                 />
-                <h1 className={styles.title}>AI Facial Detection Test App</h1>
+                <h1 className={styles.title}>AI Face Recognition Test App</h1>
             </div>
 
             <div>

@@ -4,7 +4,7 @@ import styles from "./Instructions.module.css";
 const Instructions: React.FC = () => {
     return (
         <section className={styles.instructions}>
-            <h2>👋 Welcome to Voicera Face Detection</h2>
+            <h2>👋 Welcome to Voicely Face Detection</h2>
             <p>
                 Click the <strong>Start</strong> button to begin real-time facial detection using your webcam.
                 You’ll see age, gender, and emotion insights appear right on the video.

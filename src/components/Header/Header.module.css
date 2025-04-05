@@ -22,9 +22,10 @@
   
   .title {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 600;
     margin: 0;
+    margin-left:25px;
   }
   
   .badgeButton {
@@ -40,7 +41,7 @@
   }
   
   .badgeButton:hover {
-    background-color: #c61d69; /* Optional hover effect */
+    background-color: #c61d69; 
   }
   
   @media(max-width:768px){
@@ -52,5 +53,6 @@
     }
     .title {
       font-size: 20px;
+      margin-left:0px;
     }
   }
