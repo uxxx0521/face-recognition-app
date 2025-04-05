@@ -14,7 +14,12 @@ const Header: React.FC = () => {
             </div>
 
             <div>
-                <button className={styles.badgeButton}>Demo</button>
+                <a href="https://youtu.be/XXoTvwu1RBY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none" }}>
+                    <button className={styles.badgeButton}>Demo</button>
+                </a>
             </div>
         </header>
     );

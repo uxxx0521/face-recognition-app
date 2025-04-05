@@ -119,8 +119,6 @@ const WebcamDetectionFeed: React.FC = () => {
         height: video.videoHeight,
       });
 
-      console.log("Result Data: ", resizedDetections);
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       faceapi.draw.drawDetections(canvas, resizedDetections);      // Draw boxs on faces as overlay
 
